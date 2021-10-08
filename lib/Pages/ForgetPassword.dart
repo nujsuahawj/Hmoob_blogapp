@@ -48,7 +48,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Forgot Password",
+                  "ລື່ມລະຫັດຜ່ານ",
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
@@ -102,7 +102,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                       child: circular
                           ? CircularProgressIndicator()
                           : Text(
-                              "Update Password",
+                              "ສ້າງລະຫັດຜ່ານໃໝ່",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 15,
@@ -127,7 +127,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   Widget usernameTextField() {
     return Column(
       children: [
-        Text("Username"),
+        Text("ຊື່ຂອງທ່ານ"),
         TextFormField(
           controller: _usernameController,
           decoration: InputDecoration(
@@ -147,7 +147,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   Widget passwordTextField() {
     return Column(
       children: [
-        Text("Password"),
+        Text("ລະຫັດຜ່ານ"),
         TextFormField(
           controller: _passwordController,
           obscureText: vis,

@@ -43,7 +43,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   Widget showProfile() {
-    return Center(child: Text("Profile Data is Avalable"));
+    return Center(child: Text("ກະລຸນາປະກອດຂໍ້ມູນຂອງທ່ານ"));
   }
 
   Widget button() {
@@ -54,7 +54,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Text(
-            "Tap to button to add profile data",
+            "ຄິກປຸ່ມເພື່ອຕື່ມຂໍ້ມູນ",
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.deepOrange,
@@ -78,7 +78,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               child: Center(
                 child: Text(
-                  "Add Proile",
+                  "ເພີ່ມໂປຣໄຟ",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,

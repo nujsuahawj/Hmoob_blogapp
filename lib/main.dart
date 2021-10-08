@@ -1,5 +1,7 @@
+// ignore: unused_import
 import 'package:blogapp/Blog/addBlog.dart';
 import 'package:blogapp/Pages/HomePage.dart';
+// ignore: unused_import
 import 'package:blogapp/Profile/MainProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,7 +10,7 @@ import 'Pages/WelcomePage.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MyApp()); 
 }
 
 class MyApp extends StatefulWidget {
@@ -48,6 +50,7 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       home: page,
+      debugShowCheckedModeBanner: false,
     );
   }
 }

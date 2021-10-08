@@ -181,7 +181,7 @@ class _AddBlogState extends State<AddBlog> {
               borderRadius: BorderRadius.circular(10), color: Colors.teal),
           child: Center(
               child: Text(
-            "Add Blog",
+            "ບັນທືກ",
             style: TextStyle(
                 color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
           )),

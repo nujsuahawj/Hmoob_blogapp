@@ -29,11 +29,9 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        // height: MediaQuery.of(context).size.height,
-        // width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.white, Colors.green[200]],
+            colors: [Colors.white, Colors.green[400]],
             begin: const FractionalOffset(0.0, 1.0),
             end: const FractionalOffset(0.0, 1.0),
             stops: [0.0, 1.0],
@@ -48,7 +46,7 @@ class _SignInPageState extends State<SignInPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Sign In with Email",
+                  "ເຂົ້າສູ່ລະບົບ",
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
@@ -77,7 +75,7 @@ class _SignInPageState extends State<SignInPage> {
                                 builder: (context) => ForgotPasswordPage()));
                       },
                       child: Text(
-                        "Forgot Password ?",
+                        "ລື່ມລະຫັດຜ່ານ ?",
                         style: TextStyle(
                           color: Colors.blue,
                           fontSize: 15,
@@ -94,7 +92,7 @@ class _SignInPageState extends State<SignInPage> {
                                 builder: (context) => SignUpPage()));
                       },
                       child: Text(
-                        "New User?",
+                        "ລົງທະບຽນ?",
                         style: TextStyle(
                           color: Colors.blue[900],
                           fontSize: 15,
@@ -158,7 +156,7 @@ class _SignInPageState extends State<SignInPage> {
                       child: circular
                           ? CircularProgressIndicator()
                           : Text(
-                              "Sign In",
+                              "ຕົກລົງ",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,
@@ -183,7 +181,7 @@ class _SignInPageState extends State<SignInPage> {
   Widget usernameTextField() {
     return Column(
       children: [
-        Text("Username"),
+        Text("ຊື່ຂອງທ່ານ"),
         TextFormField(
           controller: _usernameController,
           decoration: InputDecoration(
@@ -194,6 +192,7 @@ class _SignInPageState extends State<SignInPage> {
                 width: 2,
               ),
             ),
+            hintText:"ຊື່ຂອງທ່ານ",
           ),
         )
       ],
@@ -203,7 +202,7 @@ class _SignInPageState extends State<SignInPage> {
   Widget passwordTextField() {
     return Column(
       children: [
-        Text("Password"),
+        Text("ລະຫັດຜ່ານ"),
         TextFormField(
           controller: _passwordController,
           obscureText: vis,
@@ -226,6 +225,7 @@ class _SignInPageState extends State<SignInPage> {
                 width: 2,
               ),
             ),
+            hintText:"ລະຫັດຜ່ານ",
           ),
         )
       ],

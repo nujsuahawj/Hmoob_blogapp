@@ -63,11 +63,11 @@ class _CreatProfileState extends State<CreatProfile> {
                 });
                 if (_globalkey.currentState.validate()) {
                   Map<String, String> data = {
-                    "name": _name.text,
-                    "profession": _profession.text,
-                    "DOB": _dob.text,
-                    "titleline": _title.text,
-                    "about": _about.text,
+                    "ຊື່": _name.text,
+                    "ຊາຢາ": _profession.text,
+                    "ວ/ດ/ປ": _dob.text,
+                    "ຄຳອະທິບາຍ": _title.text,
+                    "ຂໍ້ມູນ": _about.text,
                   };
                   var response =
                       await networkHandler.post("/profile/add", data);
@@ -107,7 +107,7 @@ class _CreatProfileState extends State<CreatProfile> {
                     child: circular
                         ? CircularProgressIndicator()
                         : Text(
-                            "Submit",
+                            "ບັນທືກ",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 18,
@@ -165,7 +165,7 @@ class _CreatProfileState extends State<CreatProfile> {
       child: Column(
         children: <Widget>[
           Text(
-            "Choose Profile photo",
+            "ເລືອກຮູບໂປຣຟາຍ",
             style: TextStyle(
               fontSize: 20.0,
             ),
@@ -207,7 +207,7 @@ class _CreatProfileState extends State<CreatProfile> {
     return TextFormField(
       controller: _name,
       validator: (value) {
-        if (value.isEmpty) return "Name can't be empty";
+        if (value.isEmpty) return "ກະລຸນາປ້ອນຊື່";
 
         return null;
       },
@@ -225,9 +225,9 @@ class _CreatProfileState extends State<CreatProfile> {
           Icons.person,
           color: Colors.green,
         ),
-        labelText: "Name",
-        helperText: "Name can't be empty",
-        hintText: "Dev Stack",
+        labelText: "ຊື່",
+        helperText: "ກະລຸນາປ້ອນຊື່",
+        hintText: "jack sainther",
       ),
     );
   }
@@ -236,7 +236,7 @@ class _CreatProfileState extends State<CreatProfile> {
     return TextFormField(
       controller: _profession,
       validator: (value) {
-        if (value.isEmpty) return "Profession can't be empty";
+        if (value.isEmpty) return "ກະລຸນາປ້ອນຄຳອະທິບາຍ";
 
         return null;
       },
@@ -254,9 +254,9 @@ class _CreatProfileState extends State<CreatProfile> {
           Icons.person,
           color: Colors.green,
         ),
-        labelText: "Profession",
-        helperText: "Profession can't be empty",
-        hintText: "Full Stack Developer",
+        labelText: "ຄຳອະທິບາຍ",
+        helperText: "ກະລຸນາປ້ອນຄຳອະທິບາຍ",
+        hintText: "່jack sainther",
       ),
     );
   }
@@ -265,7 +265,7 @@ class _CreatProfileState extends State<CreatProfile> {
     return TextFormField(
       controller: _dob,
       validator: (value) {
-        if (value.isEmpty) return "DOB can't be empty";
+        if (value.isEmpty) return "ກະລຸນາປ້ອນ ວ/ດ/ປ";
 
         return null;
       },
@@ -283,9 +283,9 @@ class _CreatProfileState extends State<CreatProfile> {
           Icons.person,
           color: Colors.green,
         ),
-        labelText: "Date Of Birth",
-        helperText: "Provide DOB on dd/mm/yyyy",
-        hintText: "01/01/2020",
+        labelText: "ວ/ດ/ປ",
+        helperText: "ກະລຸນາປ້ອນ ວ/ດ/ປ",
+        hintText: "01/01/2001",
       ),
     );
   }
@@ -294,7 +294,7 @@ class _CreatProfileState extends State<CreatProfile> {
     return TextFormField(
       controller: _title,
       validator: (value) {
-        if (value.isEmpty) return "Title can't be empty";
+        if (value.isEmpty) return "ກະລຸນາປ້ອນ title";
 
         return null;
       },
@@ -313,8 +313,8 @@ class _CreatProfileState extends State<CreatProfile> {
           color: Colors.green,
         ),
         labelText: "Title",
-        helperText: "It can't be empty",
-        hintText: "Flutter Developer",
+        helperText: "ກະລຸນາປ້ອນ title",
+        hintText: "ຂ້ອຍເເມ່ນ jack sainther",
       ),
     );
   }
@@ -323,7 +323,7 @@ class _CreatProfileState extends State<CreatProfile> {
     return TextFormField(
       controller: _about,
       validator: (value) {
-        if (value.isEmpty) return "About can't be empty";
+        if (value.isEmpty) return "ກະລຸນາປ້ອນຂໍ້ມູນຂອງທ່ານ";
 
         return null;
       },
@@ -338,9 +338,9 @@ class _CreatProfileState extends State<CreatProfile> {
           color: Colors.orange,
           width: 2,
         )),
-        labelText: "About",
-        helperText: "Write about yourself",
-        hintText: "I am Dev Stack",
+        labelText: "ຂໍ້ມູນ",
+        helperText: "ກະລຸນາປ້ອນຂໍ້ມູນຂອງທ່ານ",
+        hintText: "ຂ້ອຍເເມ່ນ jack sainther",
       ),
     );
   }

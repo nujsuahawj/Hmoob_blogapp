@@ -32,7 +32,7 @@ class _SignUpPageState extends State<SignUpPage> {
         // width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.white, Colors.green[200]],
+            colors: [Colors.white, Colors.green[400]],
             begin: const FractionalOffset(0.0, 1.0),
             end: const FractionalOffset(0.0, 1.0),
             stops: [0.0, 1.0],
@@ -45,7 +45,7 @@ class _SignUpPageState extends State<SignUpPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Sign up with email",
+                "ລົງທະບຽນດ້ວຍ Email",
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
@@ -133,7 +133,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                         child: Center(
                           child: Text(
-                            "Sign Up",
+                            "ຕົກລົງ",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 18,
@@ -155,7 +155,7 @@ class _SignUpPageState extends State<SignUpPage> {
       setState(() {
         // circular = false;
         validate = false;
-        errorText = "Username Can't be empty";
+        errorText = "ກະລຸນາປ້ອນຊື່ຂອງທ່ານ";
       });
     } else {
       var response = await networkHandler
@@ -164,7 +164,7 @@ class _SignUpPageState extends State<SignUpPage> {
         setState(() {
           // circular = false;
           validate = false;
-          errorText = "Username already taken";
+          errorText = "ຊື່ຂອງທ່ານບໍ່ຖືກຕ້ອງ";
         });
       } else {
         setState(() {
@@ -180,7 +180,7 @@ class _SignUpPageState extends State<SignUpPage> {
       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10.0),
       child: Column(
         children: [
-          Text("Username"),
+          Text("ຊື່ຂອງທ່ານ"),
           TextFormField(
             controller: _usernameController,
             decoration: InputDecoration(
@@ -191,6 +191,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   width: 2,
                 ),
               ),
+              hintText: "ຊື່ຂອງທ່ານ",
             ),
           )
         ],
@@ -203,12 +204,12 @@ class _SignUpPageState extends State<SignUpPage> {
       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10.0),
       child: Column(
         children: [
-          Text("Email"),
+          Text("ອີແມວ"),
           TextFormField(
             controller: _emailController,
             validator: (value) {
-              if (value.isEmpty) return "Email can't be empty";
-              if (!value.contains("@")) return "Email is Invalid";
+              if (value.isEmpty) return "ກະລຸນາປ້ອນ ອີແມວ";
+              if (!value.contains("@")) return "ອີແມວ ບໍ່ຖືກຕ້ອງ";
               return null;
             },
             decoration: InputDecoration(
@@ -218,6 +219,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   width: 2,
                 ),
               ),
+              hintText: "ອີແມວ",
             ),
           )
         ],
@@ -230,12 +232,12 @@ class _SignUpPageState extends State<SignUpPage> {
       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10.0),
       child: Column(
         children: [
-          Text("Password"),
+          Text("ຕັ້ງລະຫັດຜ່ານ"),
           TextFormField(
             controller: _passwordController,
             validator: (value) {
-              if (value.isEmpty) return "Password can't be empty";
-              if (value.length < 8) return "Password lenght must have >=8";
+              if (value.isEmpty) return "ກະລຸນາປ້ອນລະຫັດຜ່ານ";
+              if (value.length < 8) return "ລະຫັດຜ່ານຄວນຈະມີຢ່າງໜ້ອຍ 8 ຕົວຂື້ນໄປ";
               return null;
             },
             obscureText: vis,
@@ -248,7 +250,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   });
                 },
               ),
-              helperText: "Password length should have >=8",
+              helperText: "ລະຫັດຜ່ານຄວນຈະມີຢ່າງໜ້ອຍ 8 ຕົວຂື້ນໄປ",
               helperStyle: TextStyle(
                 fontSize: 14,
               ),
@@ -258,6 +260,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   width: 2,
                 ),
               ),
+              hintText: "ຕັ້ງລະຫັດຜ່ານ",
             ),
           )
         ],

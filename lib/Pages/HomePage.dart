@@ -16,7 +16,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int currentState = 0;
   List<Widget> widgets = [HomeScreen(), ProfileScreen()];
-  List<String> titleString = ["Home Page", "Profile Page"];
+  List<String> titleString = ["ໜ້າລັກ", "ໂປຣໄຟ"];
   final storage = FlutterSecureStorage();
   NetworkHandler networkHandler = NetworkHandler();
   String username = "";
@@ -80,27 +80,27 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             ListTile(
-              title: Text("All Post"),
+              title: Text("ບົດຄວນທັງໝົດ"),
               trailing: Icon(Icons.launch),
               onTap: () {},
             ),
             ListTile(
-              title: Text("New Story"),
+              title: Text("ບົດຄວນໃໝ"),
               trailing: Icon(Icons.add),
               onTap: () {},
             ),
             ListTile(
-              title: Text("Settings"),
+              title: Text("ຕັ້ງຄ່າ"),
               trailing: Icon(Icons.settings),
               onTap: () {},
             ),
             ListTile(
-              title: Text("Feedback"),
+              title: Text("ເຟສບຸກ"),
               trailing: Icon(Icons.feedback),
               onTap: () {},
             ),
             ListTile(
-              title: Text("Logout"),
+              title: Text("ອອກຈາກລະບົບ"),
               trailing: Icon(Icons.power_settings_new),
               onTap: logout,
             ),
